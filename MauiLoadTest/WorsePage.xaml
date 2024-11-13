@@ -6,12 +6,9 @@
     xmlns:local="clr-namespace:MauiLoadTest"
     xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
     x:Name="this"
-    Title="WorsePage"
+    Title="{Binding SampleItems.Count, StringFormat='WorsePage: {0}'}"
     x:DataType="local:WorsePage"
     BindingContext="{Reference this}">
-    <Shell.TitleView>
-        <Label Text="{Binding SampleItems.Count, StringFormat='WorsePage: {0}'}" />
-    </Shell.TitleView>
     <CollectionView ItemsLayout="VerticalGrid, 4" ItemsSource="{Binding SampleItems}">
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="local:SampleItem">

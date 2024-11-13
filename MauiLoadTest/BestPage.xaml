@@ -6,13 +6,10 @@
     xmlns:local="clr-namespace:MauiLoadTest"
     xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
     x:Name="this"
-    Title="BestPage"
+    Title="{Binding SampleItems.Count, StringFormat='BestPage: {0}'}"
     x:DataType="local:BestPage"
     BindingContext="{Reference this}"
     Disappearing="OnDisappearing">
-    <Shell.TitleView>
-        <Label Text="{Binding SampleItems.Count, StringFormat='BestPage: {0}'}" />
-    </Shell.TitleView>
     <telerik:RadCollectionView ItemsSource="{Binding SampleItems}">
         <telerik:RadCollectionView.ItemsLayout>
             <telerik:CollectionViewGridLayout SpanCount="4" />
