@@ -28,11 +28,11 @@ public partial class WorsePage : ContentPage
     {
         for (int i = 0; i < 12345; i++)
         {
-            SampleItems.Add(new SampleItem());
             if (i % 100 == 0)
             {
                 Thread.Sleep(TimeSpan.FromMilliseconds(20));
             }
+            SampleItems.Add(new SampleItem());
         }
     }
 }

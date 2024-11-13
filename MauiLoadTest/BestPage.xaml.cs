@@ -52,13 +52,13 @@ public partial class BestPage : ContentPage
         await Task.Delay(500);
         for (int i = 0; !CTS.IsCancellationRequested && i < 12345; i++)
         {
-            lock (SampleItemsQueue)
-            {
-                SampleItemsQueue.Enqueue(new SampleItem());
-            }
             if (i % 100 == 0)
             {
                 Thread.Sleep(TimeSpan.FromMilliseconds(20));
+            }
+            lock (SampleItemsQueue)
+            {
+                SampleItemsQueue.Enqueue(new SampleItem());
             }
         }
         Loading--;
