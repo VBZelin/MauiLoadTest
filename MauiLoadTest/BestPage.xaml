@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiLoadTest.BestPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiLoadTest"
+    xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+    x:Name="this"
+    Title="BestPage"
+    x:DataType="local:BestPage"
+    BindingContext="{Reference this}"
+    Disappearing="OnDisappearing">
+    <Shell.TitleView>
+        <Label Text="{Binding SampleItems.Count, StringFormat='BestPage: {0}'}" />
+    </Shell.TitleView>
+    <telerik:RadCollectionView ItemsSource="{Binding SampleItems}">
+        <telerik:RadCollectionView.ItemsLayout>
+            <telerik:CollectionViewGridLayout SpanCount="4" />
+        </telerik:RadCollectionView.ItemsLayout>
+        <telerik:RadCollectionView.ItemTemplate>
+            <DataTemplate x:DataType="local:SampleItem">
+                <Frame>
+                    <Label
+                        HeightRequest="{Binding H}"
+                        Text="{Binding Title}"
+                        WidthRequest="{Binding W}" />
+                </Frame>
+            </DataTemplate>
+        </telerik:RadCollectionView.ItemTemplate>
+    </telerik:RadCollectionView>
+</ContentPage>

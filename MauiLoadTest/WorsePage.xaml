@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiLoadTest.WorsePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiLoadTest"
+    xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+    x:Name="this"
+    Title="WorsePage"
+    x:DataType="local:WorsePage"
+    BindingContext="{Reference this}">
+    <Shell.TitleView>
+        <Label Text="{Binding SampleItems.Count, StringFormat='WorsePage: {0}'}" />
+    </Shell.TitleView>
+    <CollectionView ItemsLayout="VerticalGrid, 4" ItemsSource="{Binding SampleItems}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="local:SampleItem">
+                <Frame>
+                    <Label
+                        HeightRequest="{Binding H}"
+                        Text="{Binding Title}"
+                        WidthRequest="{Binding W}" />
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
