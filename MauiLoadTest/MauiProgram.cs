@@ -18,7 +18,7 @@ namespace MauiLoadTest
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             Routing.RegisterRoute(nameof(WorsePage), typeof(WorsePage));

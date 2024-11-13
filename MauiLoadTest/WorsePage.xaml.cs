@@ -16,8 +16,8 @@ public partial class WorsePage : ContentPage
     /// Demonstrates the common problem of doing too much during page navigation/construction.
     /// </summary>
 	public WorsePage()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         LoadItems();
     }
 
