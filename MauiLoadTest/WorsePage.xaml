@@ -12,12 +12,12 @@
     <CollectionView ItemsLayout="VerticalGrid, 4" ItemsSource="{Binding SampleItems}">
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="local:SampleItem">
-                <Frame>
+                <Border>
                     <Label
                         HeightRequest="{Binding H}"
                         Text="{Binding Title}"
                         WidthRequest="{Binding W}" />
-                </Frame>
+                </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>

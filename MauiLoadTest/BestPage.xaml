@@ -16,12 +16,12 @@
         </telerik:RadCollectionView.ItemsLayout>
         <telerik:RadCollectionView.ItemTemplate>
             <DataTemplate x:DataType="local:SampleItem">
-                <Frame>
+                <Border>
                     <Label
                         HeightRequest="{Binding H}"
                         Text="{Binding Title}"
                         WidthRequest="{Binding W}" />
-                </Frame>
+                </Border>
             </DataTemplate>
         </telerik:RadCollectionView.ItemTemplate>
     </telerik:RadCollectionView>
