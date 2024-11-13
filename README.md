@@ -9,4 +9,4 @@ WorsePage.xaml demonstrates a common, inefficient coding approach.
 BestPage.xaml showcases best practices for improving responsiveness.
 EmptyPage.xaml is included as a benchmark for comparison.
 
-For more information, see the Wiki for detailed best practices.
+For more information, see the [Wiki](https://github.com/stephenquan/MauiLoadTest/wiki) for detailed best practices.
