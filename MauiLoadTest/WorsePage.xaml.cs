@@ -10,12 +10,12 @@ public partial class WorsePage : ContentPage
     /// <summary>
     /// This collection is bound to the CollectionView and must be updated in the UI thread.
     /// </summary>
-	public ObservableCollection<SampleItem> SampleItems { get; } = new();
+    public ObservableCollection<SampleItem> SampleItems { get; } = new();
 
     /// <summary>
     /// Demonstrates the common problem of doing too much during page navigation/construction.
     /// </summary>
-	public WorsePage()
+    public WorsePage()
     {
         InitializeComponent();
         LoadItems();
