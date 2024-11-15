@@ -2,4 +2,21 @@
 <ContentView
     x:Class="MauiLoadTest.WorseView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" />
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiLoadTest"
+    x:Name="this"
+    x:DataType="local:WorseView"
+    BindingContext="{Reference this}">
+    <CollectionView ItemsLayout="VerticalGrid, 4" ItemsSource="{Binding SampleItems}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="local:SampleItem">
+                <Border>
+                    <Label
+                        HeightRequest="{Binding H}"
+                        Text="{Binding Title}"
+                        WidthRequest="{Binding W}" />
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentView>
