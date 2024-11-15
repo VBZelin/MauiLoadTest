@@ -30,6 +30,11 @@
 
                 <Button
                     Clicked="OnNavigate"
+                    CommandParameter="WorsePageWithLazyView"
+                    Text="WorsePageWithLazyView" />
+
+                <Button
+                    Clicked="OnNavigate"
                     CommandParameter="BestPage"
                     Text="BestPage" />
 
@@ -37,10 +42,7 @@
                     Clicked="OnNavigate"
                     CommandParameter="EmptyPage"
                     Text="EmptyPage" />
-
             </VerticalStackLayout>
-
         </Grid>
     </Grid>
-
 </ContentPage>
