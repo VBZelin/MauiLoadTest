@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using Telerik.Maui.Controls.Compatibility;
 
 namespace MauiLoadTest
@@ -11,6 +12,7 @@ namespace MauiLoadTest
             builder
                 .UseTelerik()
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -22,6 +24,7 @@ namespace MauiLoadTest
 #endif
 
             Routing.RegisterRoute(nameof(WorsePage), typeof(WorsePage));
+            Routing.RegisterRoute(nameof(WorsePageWithLazyView), typeof(WorsePageWithLazyView));
             Routing.RegisterRoute(nameof(BestPage), typeof(BestPage));
             Routing.RegisterRoute(nameof(EmptyPage), typeof(EmptyPage));
             Routing.RegisterRoute(nameof(TabViewWithCollectionView), typeof(TabViewWithCollectionView));

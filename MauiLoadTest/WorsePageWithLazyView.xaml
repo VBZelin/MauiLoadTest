@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiLoadTest.WorsePageWithLazyView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiLoadTest"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="WorsePageWithLazyView">
+    <toolkit:LazyView x:Name="LazyUserAction" x:TypeArguments="local:WorseView" />
+</ContentPage>
