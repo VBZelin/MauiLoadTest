@@ -1,46 +1,37 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
-    x:Class="MauiLoadTest.MainPage"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Name="this">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage x:Class="MauiLoadTest.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="this">
     <Grid>
         <Grid ColumnDefinitions="*,2*,*">
-            <VerticalStackLayout
-                Grid.Column="1"
-                Spacing="25"
-                VerticalOptions="Center">
-
-                <ActivityIndicator IsRunning="True" VerticalOptions="Center">
+            <VerticalStackLayout Grid.Column="1"
+                                 Spacing="25"
+                                 VerticalOptions="Center">
+                <ActivityIndicator IsRunning="True"
+                                   VerticalOptions="Center">
                     <ActivityIndicator.Triggers>
-                        <DataTrigger
-                            Binding="{Binding Busy, Source={Reference this}}"
-                            TargetType="ActivityIndicator"
-                            Value="0">
-                            <Setter Property="IsRunning" Value="False" />
+                        <DataTrigger Binding="{Binding Busy, Source={Reference this}}"
+                                     TargetType="ActivityIndicator"
+                                     Value="0">
+                            <Setter Property="IsRunning"
+                                    Value="False" />
                         </DataTrigger>
                     </ActivityIndicator.Triggers>
                 </ActivityIndicator>
-
-                <Button
-                    Clicked="OnNavigate"
-                    CommandParameter="WorsePage"
-                    Text="WorsePage" />
-
-                <Button
-                    Clicked="OnNavigate"
-                    CommandParameter="BestPage"
-                    Text="BestPage" />
-
-                <Button
-                    Clicked="OnNavigate"
-                    CommandParameter="EmptyPage"
-                    Text="EmptyPage" />
-
+                <Button Clicked="OnNavigate"
+                        CommandParameter="WorsePage"
+                        Text="WorsePage" />
+                <Button Clicked="OnNavigate"
+                        CommandParameter="BestPage"
+                        Text="BestPage" />
+                <Button Clicked="OnNavigate"
+                        CommandParameter="EmptyPage"
+                        Text="EmptyPage" />
+                <Button Clicked="OnNavigate"
+                        CommandParameter="TabViewWithCollectionView"
+                        Text="TabViewWithCollectionView" />
             </VerticalStackLayout>
-
         </Grid>
     </Grid>
-
 </ContentPage>

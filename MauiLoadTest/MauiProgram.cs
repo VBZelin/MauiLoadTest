@@ -24,6 +24,7 @@ namespace MauiLoadTest
             Routing.RegisterRoute(nameof(WorsePage), typeof(WorsePage));
             Routing.RegisterRoute(nameof(BestPage), typeof(BestPage));
             Routing.RegisterRoute(nameof(EmptyPage), typeof(EmptyPage));
+            Routing.RegisterRoute(nameof(TabViewWithCollectionView), typeof(TabViewWithCollectionView));
 
             return builder.Build();
         }
